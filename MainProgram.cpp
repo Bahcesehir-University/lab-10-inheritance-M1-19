@@ -196,7 +196,7 @@ string Car::describe() {
 // ----------------------------------------------------------------
 
 // TODO: Implement Truck constructor (chain to Vehicle)
-Truck::Truck(string make, int year,double fuelLevel,double payloadTons): Vehicle(make,year,fuelLevel){
+Truck::Truck(string make, int year,double fuelLevel,double payloadTons): Vehicle(make,year,fuelLevel) , payloadTons(payloadTons){
 
     this-> payloadTons=payloadTons;
 }
@@ -208,7 +208,7 @@ double Truck::getPayloadTons() const{
 // TODO: Implement describe()
 string Truck::describe() {
     std::ostringstream oss;
-    oss << "Car: " << make << " (" << year << "), "
+    oss << "Truck: " << make << " (" << year << "), "
         << payloadTons << " tons, fuel: " << fuelLevel << "%";
     return oss.str();
 }
